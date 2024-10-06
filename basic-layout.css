@@ -1,0 +1,63 @@
+@charset "UTF-8";
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  width: 800px;
+  /* 1fr:引き伸ばし 1fr 2frと指定可能*/
+  grid-template:
+    "header header header" 150px
+    "left center right" 1fr
+    "footer footer footer" 300px
+    / 150px 1fr 200px;
+  gap: 10px;
+}
+header {
+  background-color: lightcoral;
+  outline: auto;
+  grid-area: header;
+}
+nav {
+  background-color: lightgreen;
+  outline: auto;
+  grid-area: left;
+}
+main {
+  background-color: lightgray;
+  outline: auto;
+  grid-area: center;
+}
+aside {
+  background-color: lightyellow;
+  outline: auto;
+  grid-area: right;
+}
+footer {
+  background-color: lightsalmon;
+  outline: auto;
+  grid-area: footer;
+}
+/* @media は、特定の条件に基づいてCSSスタイルを適用するための構文。 */
+@media screen and (max-width: 1000px) {
+  /* メディアクエリが成立した場合に適用される具体的なCSSスタイルを定義する */
+  body {
+    grid-template:
+      "header" 150px
+      "center" 1fr
+      "left"
+      "right"
+      "footer" 300px;
+  }
+}
+
+/*
+@media は、特定の条件に基づいてCSSスタイルを適用するための構文。
+特定の条件に基づいてCSSスタイルを適用するための構文。この場合、条件は「画面幅が1000px以下のとき」と指定されている。
+------------------------------------------------------------------------------------------------
+screen
+スタイルが適用されるメディアのタイプを指定する。screen は、コンピュータやスマートフォンのようなスクリーンデバイス
+に対してスタイルを適用することを意味する。他にも、print という値を指定すると、印刷用のスタイルを定義できる。
+------------------------------------------------------------------------------------------------
+(max-width: 1000px)
+画面幅が最大で1000ピクセル（px）以下の場合にスタイルを適用する、という条件を指定している。
+*/

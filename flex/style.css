@@ -1,0 +1,77 @@
+/* body全体のスタイルをリセット */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+/* フォームを中央に配置し、縦に並べるためのflexbox */
+.responsive-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* labelとinputの間にスペースを追加 */
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* inputフィールドのスタイルを整える */
+input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* 送信ボタンのスタイルを調整 */
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ホバー時のボタンの色を変更 */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* スクリーンサイズが600px以下の場合のレスポンシブ対応 */
+@media screen and (max-width: 600px) {
+  /* フォームのpaddingを小さくし、入力フィールドの間隔を狭くする */
+  .responsive-form {
+    padding: 10px;
+  }
+
+  /* inputフィールドのフォントサイズを調整 */
+  input {
+    font-size: 14px;
+  }
+
+  /* ボタンのフォントサイズも小さくする */
+  button {
+    font-size: 14px;
+  }
+}
+
+/* スクリーンサイズが1000px以下の場合のレスポンシブ対応を追加 */
+@media screen and (max-width: 1000px) {
+  /* フォーム全体の幅を調整 */
+  .responsive-form {
+    max-width: 90%;
+  }
+}

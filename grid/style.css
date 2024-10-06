@@ -1,0 +1,66 @@
+/* フォーム全体のスタイルを定義 */
+.form-container {
+  /* グリッドレイアウトの列数を1列に設定して縦並びにする */
+  display: grid;
+  grid-template-columns: 1fr;
+
+  /* 各フォームアイテム間に間隔を設ける */
+  gap: 15px;
+
+  /* 中央揃えのためのスタイル設定 */
+  margin: 50px auto;
+
+  /* 最大幅を設定して、レスポンシブに対応 */
+  max-width: 400px;
+
+  /* 背景や余白を追加してスタイルを強調 */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ラベルのスタイル */
+label {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* インプットフィールドのスタイル */
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* ボタンのスタイル */
+button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+/* ボタンのホバースタイル */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* レスポンシブデザイン: 画面幅が400px以下の場合でもスタイルを維持 */
+@media (max-width: 400px) {
+  .form-container {
+    /* 画面が狭くなった場合でも縦並びを保つ */
+    grid-template-columns: 1fr;
+  }
+
+  /* フォーム内のインプットやボタンの幅を調整 */
+  input, button {
+    width: 100%;
+  }
+}
